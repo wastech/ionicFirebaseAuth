@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ionicchapapp-1e8fe": {
+      "hosting": {
+        "app": [
+          "ionicchapapp-1e8fe"
+        ]
+      }
+    }
+  }
+}

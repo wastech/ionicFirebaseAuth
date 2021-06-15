@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen padding>
+  <form (ngSubmit)="register()">
+    <!-- <ion-item lines="full">
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" [(ngModel)]="username"></ion-input>
+    </ion-item> -->
+
+    <ion-item lines="full">
+      <ion-label floating>Email Address</ion-label>
+      <ion-input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label floating>Password</ion-label>
+      <ion-input
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" expand="block">Register</ion-button>
+  </form>
+  <div class="form-group">
+    <p *ngIf="errorMessage.length > 0" class="text-danger">{{errorMessage}}</p>
+
+    <p *ngIf="error.message.length > 0" class="text-danger">
+      {{error.message}}
+    </p>
+
+    <p *ngIf="message.length > 0" class="text-info">{{message}}</p>
+  </div>
+</ion-content>

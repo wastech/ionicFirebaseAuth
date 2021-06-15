@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen padding>
+  <form (ngSubmit)="login()">
+    <ion-item>
+      <ion-label floating>Email Address</ion-label>
+      <ion-input
+        type="text"
+        name="email"
+        [(ngModel)]="email"
+        placeholder="Enter email Id"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input
+        type="password"
+        name="password"
+        [(ngModel)]="password"
+        placeholder="Enter Password"
+        required
+      ></ion-input>
+    </ion-item>
+    <div class="form-group">
+      <p *ngIf="errorMessage.length > 0" class="text-danger">
+        {{errorMessage}}
+      </p>
+
+      <p *ngIf="error.message.length > 0" class="text-danger">
+        {{error.message}}
+      </p>
+    </div>
+    <ion-button expand="block" (click)="login()">Login</ion-button>
+    <ion-button
+      expand="block"
+      color="danger"
+      [routerLink]="['/forgot-password']"
+      >Forgot Password</ion-button
+    >
+
+    <ion-button expand="block" [routerLink]="['/register']"
+      >Register</ion-button
+    >
+  </form>
+</ion-content>
