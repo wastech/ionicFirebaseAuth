@@ -1,0 +1,7 @@
+{
+  "name": "ionicAuth",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
